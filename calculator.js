@@ -1,3 +1,7 @@
+let firstNumber;
+let secondNumber;
+let operator;
+
 function add(a, b) {
     // Returns the sum of a and b passed to the function
     return a + b;

@@ -2,6 +2,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: "Lucida Console", monospace;
 }
 
 /* Calculator styling */
@@ -25,6 +26,17 @@ body {
 
 #top-screen, #bottom-screen {
     text-align: right;
+}
+
+#top-screen {
+    height: 20px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+#bottom-screen {
+    height: 30px;
+    font-size: 26px;
 }
 
 /* Button styling */

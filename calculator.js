@@ -21,3 +21,26 @@ function divide(a, b) {
     // Returns the quotient of a and b passed to the function
     return a / b;
 }
+
+function operate(firstNumber, secondNumber, operator) {
+    let result;
+    switch(operator) {
+        case "+":
+            result = add(firstNumber, secondNumber);
+            break;
+
+        case "-":
+            result = subtract(firstNumber, secondNumber);
+            break;
+
+        case "*":
+            result = multiple(firstNumber, secondNumber);
+            break;
+
+        case "/":
+            result = divide(firstNumber, secondNumber);
+            break;
+    }
+
+    return result;
+}

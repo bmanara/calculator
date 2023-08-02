@@ -167,8 +167,20 @@ function operate(firstNumber, secondNumber, operator) {
             result = divide(firstNumber, secondNumber);
             break;
     }
-
+    if (isLongDecimal(result)) {
+        result = result.toFixed(13);
+    }
     return result;
+}
+
+function isLongDecimal(num) {
+    if (Number.isInteger(num)) {
+        return false;
+    }
+    else if (num.toString().split('.')[1].length > 13) {
+        return true;
+    }
+    return false;
 }
 
 

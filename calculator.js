@@ -184,6 +184,7 @@ function isLongDecimal(num) {
 }
 
 
+// Disable decimal button when present on screen already
 let decimalButton = document.querySelector("#decimal");
 bottomDisplay.addEventListener('DOMSubtreeModified', function() {
     if (bottomDisplay.textContent.includes(".")) {
@@ -192,4 +193,27 @@ bottomDisplay.addEventListener('DOMSubtreeModified', function() {
     else {
         decimalButton.disabled = false;
     }
+})
+
+
+// Enable keyboard support
+document.addEventListener('keydown', (event) => {
+    let pressedKey = event.key;
+    event.preventDefault();
+    
+    if (pressedKey === "Backspace") {
+        document.querySelector("#clear").click();
+    }
+
+    if (pressedKey === "Escape") {
+        document.querySelector("#all-clear").click();
+    }
+
+    if (pressedKey === ".") {
+        document.querySelector("#decimal").click();
+    }
+
+    
+    
+    document.getElementById(pressedKey).click();
 })

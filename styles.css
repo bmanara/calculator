@@ -3,6 +3,14 @@ body {
     justify-content: center;
     align-items: center;
     font-family: "Lucida Console", monospace;
+    min-height: 100%;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
 
 /* Calculator styling */
@@ -12,6 +20,7 @@ body {
     border-width: 1px;
     border-radius: 10px;
     padding: 10px;
+    background-color: rgb(153, 204, 204);
 }
 
 /* Screen styling */
@@ -20,6 +29,7 @@ body {
     margin-bottom: 10px;
     background-color: lightgrey;
     border-style: solid;
+    border-color: grey;
     border-width: 2px;
     border-radius: 3px;
 }
@@ -29,14 +39,14 @@ body {
 }
 
 #top-screen {
-    height: 20px;
-    font-size: 16px;
+    height: 26px;
+    font-size: 22px;
     margin-bottom: 10px;
 }
 
 #bottom-screen {
-    height: 30px;
-    font-size: 26px;
+    height: 44px;
+    font-size: 40px;
 }
 
 /* Button styling */
@@ -53,6 +63,17 @@ body {
 
 button {
     flex: 1 1 80px;
+    background-color: lightskyblue;
+    border: 2px solid grey;
+    border-radius: 5px;
+    font-size: 30px;
+    -webkit-transition: all 0.2s;
+    cursor: pointer;
+    padding: 3%;
+}
+
+button:hover {
+    background-color: rgb(43, 167, 245);
 }
 
 #row1 #all-clear, #row1 #clear {
@@ -63,3 +84,25 @@ button {
     flex-grow: 9;
 }
 
+#clear {
+    background-color: rgb(243, 187, 102);
+    -webkit-transition: all 0.2s;
+}
+
+#clear:hover {
+    background-color: rgb(241, 171, 65);
+}
+
+#all-clear {
+    background-color: rgb(204, 77, 77);
+    -webkit-transition: all 0.2s;
+}
+
+#all-clear:hover {
+    background-color: rgb(204, 49, 49);
+}
+
+.operator {
+    background-color: rgb(24, 143, 143);
+    -webkit-transition: all 0.2s;
+}
